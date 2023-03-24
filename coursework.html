@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Another Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Bitter&family=Noto+Sans+TC:wght@500&family=PT+Sans+Caption&display=swap" rel="stylesheet">
+    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./coursework.css">
+  </head>
+  <body>
+    <div class="grid-item" id="grid-item1"></div>
+    <div class="grid-item" id="grid-item2">
+        <div id="nav">
+            <ul id="list">
+                <li class="nav-item"><a href="index.html">home</a></li>
+                <li class="nav-item"><a href="">about me</a></li>
+                <li class="nav-item"><a href="projects.html">projects</a></li>
+                <li class="nav-item"><a href="">achievements</a></li>
+                <li class="nav-item"><a id = "coursework" href="">coursework</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grid-item" id="grid-item3">
+        <div id="header">
+            <h1 id="hello">Coursework 📚</h1> 
+        </div>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Fall 2022
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  <strong>CS61A: A</strong> <br><em>Structure and Interpretation of Computer Programs</em></br>
+                  <strong>COGSCI 1B: A+</strong> <br><em>Introduction to Cognitive Science</em></br>
+                  <strong>INTEGBI 43: A</strong> <br><em>Microbiomes and Symbiosis</em></br>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Spring 2023
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>CS61B</strong> <br><em>Data Structures and Algorithms</em></br>
+                <strong>EECS 16A</strong> <br><em>Designing Information Devices and Systems I</em></br>
+                <strong>CS 370</strong> <br><em>Adaptive Instruction Methods in Computer Science</em></br>
+                <strong>G39S</strong> <br><em>Language Origins and Development</em></br>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Soon to come!
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Stay tuned... 😉
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+  <script src="coursework.js"></script>
+</html>

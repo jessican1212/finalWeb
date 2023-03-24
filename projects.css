@@ -1,0 +1,133 @@
+body{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.2fr 1fr 5fr;
+    grid-gap: 50px;
+    background-color: #2b4254;
+}
+
+.grid-item{
+    height: 100vh;
+}
+
+#nav{
+    margin-top: 50px;
+    position: fixed;
+    width: 200px;
+}
+
+#list{
+    text-align: right;
+    list-style: none;
+    font-size: 17px;
+}
+
+.nav-item{
+    margin-top: 40px;
+    margin-right: 8px;
+    font-family: 'Bitter';
+}
+
+#hello{
+    line-height: 50px;
+    margin-right: 20px;
+    color: white;
+    font-family: 'PT Sans Caption';
+}
+
+#header{
+    height: 100px;
+    margin-top: 140px;
+    margin-left: 50px;
+    font-size: 30px;
+    display: flex;
+}
+ 
+#grid-item2{
+    display: flex;
+    justify-content: center;
+}
+
+
+a{
+    color: rgb(204, 204, 204);
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}
+
+#grid-wrapper{
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 35px;
+    max-width: 900px;
+}
+
+.project-card{
+    height: 300px;
+    width: 250px;
+    background-color: rgb(255, 251, 239);
+    box-shadow: 5px 10px rgb(53, 53, 53);
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.inner-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Noto Sans TC';
+    padding: 10px;
+    font-size: 15px;
+}
+
+.used{
+    font-size: 13px;
+    color: rgb(60, 60, 60);
+}
+
+#projects{
+    color: white;
+    font-family: 'PT Sans Caption';
+}
+
+#blurb{
+    margin-left: 50px;
+    font-size: 18px;
+    font-family: 'PT Sans Caption';
+    color: rgb(210, 210, 210);
+}
+
+#skillset{
+    color: white;
+    font-family: 'PT Sans Caption';
+    margin-left: 50px;
+    font-size: 60px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#blurb2{
+    margin-left: 50px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-family: 'PT Sans Caption';
+    color: rgb(210, 210, 210);
+    margin-top: 0;
+}
+
+#icon-wrapper{
+    padding-left: 50px;
+    padding-bottom: 80px;
+}
+
+.icon{
+    height: 50px;
+    width: 50px;
+}

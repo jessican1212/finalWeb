@@ -1,0 +1,82 @@
+body{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.2fr 1fr 5fr;
+    grid-gap: 50px;
+    background-color: #2b4254;
+}
+
+.grid-item{
+    height: 100vh;
+}
+
+#nav{
+    margin-top: 50px;
+    position: fixed;
+    width: 200px;
+}
+
+#list{
+    text-align: right;
+    list-style: none;
+    font-size: 17px;
+}
+
+.nav-item{
+    margin-top: 40px;
+    margin-right: 8px;
+    font-family: 'Bitter';
+}
+
+
+ 
+#grid-item2{
+    display: flex;
+    justify-content: center;
+}
+
+
+a{
+    color: rgb(204, 204, 204);
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}
+
+#coursework{
+    color: white;
+    font-family: 'PT Sans Caption';
+}
+
+#hello{
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 800;
+    margin-right: 20px;
+    color: white;
+    font-family: 'PT Sans Caption';
+}
+
+#header{
+    height: 80px;
+    margin-top: 160px;
+    font-size: 30px;
+    display: flex;
+}
+
+#grid-item3{
+    padding-right: 100px;
+    padding-left: 40px;
+}
+
+.accordion{
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: 'Arvo';
+}
+
+.accordion-button-active{
+    background-color: rgb(187, 190, 255);
+}
