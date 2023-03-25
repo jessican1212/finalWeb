@@ -67,16 +67,16 @@ a:hover{
 }
 
 #grid-item3{
-    padding-right: 100px;
+    padding-right: 10vw;
     padding-left: 40px;
 }
 
 .accordion{
     margin-left: 50px;
-    margin-right: 50px;
+    margin-right: 10px;
     font-family: 'Arvo';
 }
 
-.accordion-button-active{
-    background-color: rgb(187, 190, 255);
+.accordion-button{
+    background-color: rgb(244, 244, 244);
 }

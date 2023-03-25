@@ -56,7 +56,8 @@ body{
 #links-wrapper{
     height: auto;
     margin-top: 10px;
-    padding-left: 100px;
+    padding-left: 105px;
+    display: flex;
 }
 
 a{
@@ -97,4 +98,21 @@ a:hover{
 
 .thisclass{
     list-style-type:circle;
+}
+
+.sliding {
+	display: inline;
+	text-indent: 8px;
+    padding-left: 4px;
+    color: white;
+    font-family: 'Noto Sans TC';
+    font-size: 23px;
+    font-weight: 1000;
+    margin: 0;
+    line-height: 47px;
+}
+.sliding span{
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
 }

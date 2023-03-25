@@ -17,11 +17,21 @@ let fadeUp = anime({
 
 let bouncingBall = anime({
 	targets: '#period',
-	translateY: ['-55', '0', '-18','0', '-8', '0', '-4','0', '-2','0'],
-    delay: 800,
-	duration: 5000,
+	translateY: ['-55', '0', '-18','0', '-8', '0', '-4','0', '-2','0', '-1', '0', '-0.3', '0'],
+    delay: 1000,
+	duration: 7000,
 	loop: false,
-	direction: 'alternate',
 	easing: 'easeInOutSine',
 });
 
+let textChanger = anime({
+    targets: '.sliding span',
+    keyframes: [
+      {translateX: -50, opacity: 0, duration:0},
+      {translateX: 0, opacity:1, duration: 300},
+      {translateX: 50, opacity:0,delay: 1500, duration:300},
+    ],
+    easing: 'linear',
+    delay: anime.stagger(1800, {start: 0}),
+    loop: true
+  });
