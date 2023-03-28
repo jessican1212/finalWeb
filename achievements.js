@@ -5,4 +5,5 @@ let fadeUp = anime({
     loop: false,
     autoplay: true,
     translateY: -70,
+    opacity: [0,1],
 });

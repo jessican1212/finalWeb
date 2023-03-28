@@ -13,6 +13,7 @@ let fadeUp = anime({
     loop: false,
     autoplay: true,
     translateY: -60,
+    opacity: [0,1],
 });
 
 let bouncingBall = anime({
