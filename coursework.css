@@ -3,7 +3,7 @@ body{
     justify-content: center;
     grid-template-columns: 0.2fr 1fr 5fr;
     grid-gap: 50px;
-    background-color: #2b4254;
+    background-color: #001233;
 }
 
 .grid-item{
@@ -37,16 +37,16 @@ body{
 
 
 a{
-    color: rgb(204, 204, 204);
+    color: #CAC0B3;
     text-decoration: none;
 }
 
 a:hover{
-    color: white;
+    color: #FF595A;
 }
 
 #coursework{
-    color: white;
+    color: #FF595A;
     font-family: 'PT Sans Caption';
 }
 
@@ -55,7 +55,7 @@ a:hover{
     font-size: 50px;
     font-weight: 800;
     margin-right: 20px;
-    color: white;
+    color: #CAC0B3;
     font-family: 'PT Sans Caption';
 }
 

@@ -3,7 +3,7 @@ body{
     justify-content: center;
     grid-template-columns: 0.2fr 1fr 5fr;
     grid-gap: 50px;
-    background-color: #2b4254;
+    background-color: #001233;
 }
 
 .grid-item{
@@ -31,7 +31,7 @@ body{
 #hello{
     line-height: 50px;
     margin-right: 20px;
-    color: white;
+    color: #CAC0B3;
     font-family: 'PT Sans Caption';
 }
 
@@ -50,12 +50,12 @@ body{
 
 
 a{
-    color: rgb(204, 204, 204);
+    color: #CAC0B3;
     text-decoration: none;
 }
 
 a:hover{
-    color: white;
+    color: #FF595A;
 }
 
 #grid-wrapper{
@@ -97,11 +97,16 @@ a:hover{
     font-family: 'PT Sans Caption';
 }
 
+#projects1{
+    color: #FF595A;
+    font-family: 'PT Sans Caption';
+}
+
 #blurb{
     margin-left: 50px;
     font-size: 18px;
     font-family: 'PT Sans Caption';
-    color: rgb(210, 210, 210);
+    color: #CAC0B3;
 }
 
 #skillset{
@@ -118,7 +123,7 @@ a:hover{
     padding-bottom: 15px;
     font-size: 18px;
     font-family: 'PT Sans Caption';
-    color: rgb(210, 210, 210);
+    color: #CAC0B3;
     margin-top: 0;
 }
 
