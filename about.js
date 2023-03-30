@@ -8,6 +8,8 @@ let fadeUp = anime({
     opacity: [0,1],
 });
 
+localStorage.setItem('refreshToken', 'AQBj3HEbfcyJxaxXCwcQpaIyw1kl1dtQdO7gySGXY_P8sUGVeLhazv4k1HcLsVKGtkEXP04rNxpshVXDIx-Odxn-2Mp9mg1KKs8tfu_J0vxi9gO69UtR8F2izRgjUsdEHBU')
+
 //url to authorize myself to waterpark, sometimes authorization code changes??? everytime to authorize i think
 //https://accounts.spotify.com/en/authorize?client_id=4285a89feed349aebc6bb2d129265cb6&response_type=code&redirect_uri=https://www.google.com&scope=user-read-recently-played user-read-currently-playing user-top-read
 
@@ -37,7 +39,8 @@ async function fetchTokens(){
 }
 
 async function getRecentlyPlayed() {
-    console.log("CUREENT ACCESS TOKEEEN" + localStorage.getItem('accessToken')) 
+    console.log("CURRENT REFRESH TOKENNNNNN YUH" + localStorage.getItem('refreshToken'))
+
   
     const response = await fetch("https://api.spotify.com/v1/me/player/recently-played?limit=1", {
         method: 'GET',
@@ -83,6 +86,7 @@ async function refreshAccessToken() {
     })
   
     if (response.status == 200) {
+        console.log("GOT INTO REFRESH FUNCTINO YAHAAYA")
         let data = await response.json()
         localStorage.setItem('accessToken', data['access_token'])
         console.log("Successfully updated accessToken in localStorage")
@@ -147,7 +151,6 @@ async function getCurrentlyPlaying() {
     })
   
     if (response.status == 200) {
-        console.log("CURRENT ACCESS TOKEN" + localStorage.getItem('accessToken'))
         console.log("Currently playing request successful!")
         let data = await response.json()
         let currentSong = data['item']['name']
