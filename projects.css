@@ -73,7 +73,6 @@ a:hover{
     width: 250px;
     background-color: rgb(255, 251, 239);
     box-shadow: 5px 10px rgb(53, 53, 53);
-    border: 2px solid black;
     border-radius: 6px;
 }
 

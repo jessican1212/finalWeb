@@ -30,9 +30,9 @@ let textChanger = anime({
     keyframes: [
       {translateX: -50, opacity: 0, duration:0},
       {translateX: 0, opacity:1, duration: 300},
-      {translateX: 50, opacity:0,delay: 1300, duration:300},
+      {translateX: 50, opacity:0,delay: 1100, duration:300},
     ],
     easing: 'linear',
-    delay: anime.stagger(1600, {start: 0}),
+    delay: anime.stagger(1400, {start: 0}),
     loop: true
   });

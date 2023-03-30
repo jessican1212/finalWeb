@@ -1,0 +1,72 @@
+body{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.2fr 1fr 5fr;
+    grid-gap: 50px;
+    background-color: #001233;
+}
+
+.grid-item{
+    height: 100vh;
+}
+
+#nav{
+    margin-top: 50px;
+    position: fixed;
+    width: 200px;
+}
+
+#list{
+    text-align: right;
+    list-style: none;
+    font-size: 17px;
+}
+
+.nav-item{
+    margin-top: 40px;
+    margin-right: 8px;
+    font-family: 'Bitter';
+}
+
+#hello{
+    line-height: 50px;
+    color: #CAC0B3;
+    font-family: 'PT Sans Caption';
+}
+
+#header{
+    height: 100px;
+    margin-top: 140px;
+    margin-left: 50px;
+    font-size: 30px;
+    display: flex;
+}
+ 
+#grid-item2{
+    display: flex;
+    justify-content: center;
+}
+
+
+a{
+    color: #CAC0B3;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #FF595A;
+}
+
+#about{
+    color: #FF595A;
+    font-family: 'PT Sans Caption';
+}
+
+.musicBlurb{
+    margin-left: 50px;
+    font-size: 18px;
+    font-family: 'PT Sans Caption';
+    color: rgb(210, 210, 210);
+    margin-right: 10vw;
+}
+

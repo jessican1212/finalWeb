@@ -30,7 +30,6 @@ body{
 
 #hello{
     line-height: 50px;
-    margin-right: 20px;
     color: #CAC0B3;
     font-family: 'PT Sans Caption';
 }
@@ -79,6 +78,7 @@ a:hover{
     font-size: 18px;
     font-family: 'PT Sans Caption';
     color: rgb(210, 210, 210);
+    margin-top: 0;
 }
 
 
