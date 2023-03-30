@@ -10,15 +10,15 @@ let fadeUp = anime({
 
 localStorage.setItem('refreshToken', 'AQBj3HEbfcyJxaxXCwcQpaIyw1kl1dtQdO7gySGXY_P8sUGVeLhazv4k1HcLsVKGtkEXP04rNxpshVXDIx-Odxn-2Mp9mg1KKs8tfu_J0vxi9gO69UtR8F2izRgjUsdEHBU')
 
-//url to authorize myself to waterpark, sometimes authorization code changes??? everytime to authorize i think
+//authorization url
 //https://accounts.spotify.com/en/authorize?client_id=4285a89feed349aebc6bb2d129265cb6&response_type=code&redirect_uri=https://www.google.com&scope=user-read-recently-played user-read-currently-playing user-top-read
 
-//current auth code
-//AQAOs0jHQylkxmh_kGMPp9tER653LieXCPcjeMle5gXVepZ9tLxGgaUksibgfbCU_KnbFTsYcki5J4k-a1Fv_D5yrj9_dwBvtLZYeNFh0eQssJt0PxDXKpCDhCxCLZlJyLw8zT2mwVxM1WHMCgOK53C8yi_TDgY1ybuImj_WJLIdvjy_CvFNDI6TsSLmwTv_dfrd8tnlOMSQPe6mLIVyOt8TsMi1G4Ig_GPKhbsNwSTURn_A60IduqbgvNgSa55K_Q
+//authorization code
+authCode = 'AQAOs0jHQylkxmh_kGMPp9tER653LieXCPcjeMle5gXVepZ9tLxGgaUksibgfbCU_KnbFTsYcki5J4k-a1Fv_D5yrj9_dwBvtLZYeNFh0eQssJt0PxDXKpCDhCxCLZlJyLw8zT2mwVxM1WHMCgOK53C8yi_TDgY1ybuImj_WJLIdvjy_CvFNDI6TsSLmwTv_dfrd8tnlOMSQPe6mLIVyOt8TsMi1G4Ig_GPKhbsNwSTURn_A60IduqbgvNgSa55K_Q'
 
 //ONLY USED ONCE TO INSTANTIATE LOCALSTORAGE
 async function fetchTokens(){
-    const response = await fetch("https://accounts.spotify.com/api/token?grant_type=authorization_code&code=AQAOs0jHQylkxmh_kGMPp9tER653LieXCPcjeMle5gXVepZ9tLxGgaUksibgfbCU_KnbFTsYcki5J4k-a1Fv_D5yrj9_dwBvtLZYeNFh0eQssJt0PxDXKpCDhCxCLZlJyLw8zT2mwVxM1WHMCgOK53C8yi_TDgY1ybuImj_WJLIdvjy_CvFNDI6TsSLmwTv_dfrd8tnlOMSQPe6mLIVyOt8TsMi1G4Ig_GPKhbsNwSTURn_A60IduqbgvNgSa55K_Q&redirect_uri=https://www.google.com", {
+    const response = await fetch("https://accounts.spotify.com/api/token?grant_type=authorization_code&code="+authCode+"&redirect_uri=https://www.google.com", {
         method: 'POST',
       headers: {
         "Authorization": "Basic NDI4NWE4OWZlZWQzNDlhZWJjNmJiMmQxMjkyNjVjYjY6NmQ3NGJkMmY4YzllNDM4ZDg4ZmE4NjE4MjRiOTNhYmU",
@@ -39,9 +39,7 @@ async function fetchTokens(){
 }
 
 async function getRecentlyPlayed() {
-    console.log("CURRENT REFRESH TOKENNNNNN YUH" + localStorage.getItem('refreshToken'))
 
-  
     const response = await fetch("https://api.spotify.com/v1/me/player/recently-played?limit=1", {
         method: 'GET',
       headers: {
@@ -51,21 +49,20 @@ async function getRecentlyPlayed() {
     })
   
     if (response.status == 200) {
-        console.log("Recently played request successful!")
+        console.log("Recently played request status 200!")
         let data = await response.json()
         let songTitle = data['items'][0]['track']['name']
         let songArtist = data['items'][0]['track']['artists'][0]['name']
         document.getElementById("lastSong").innerHTML = songTitle
         document.getElementById("lastArtist").innerHTML = songArtist
-        console.log('Successfully got recently played')
         console.log(songTitle, songArtist)
         return true;
     }
 
     else if (response.status == 401) {
-        console.log('Access Token expired :( response status 401')
+        console.log('Access Token is wrong - response status 401')
         await refreshAccessToken()
-        console.log('Successfully got new Access Token!')
+        console.log('completed refreshAccessToken function')
         getRecentlyPlayed()
     }
 
@@ -86,12 +83,11 @@ async function refreshAccessToken() {
     })
   
     if (response.status == 200) {
-        console.log("GOT INTO REFRESH FUNCTINO YAHAAYA")
+        console.log("Refresh function status 200!")
         let data = await response.json()
         localStorage.setItem('accessToken', data['access_token'])
         console.log("Successfully updated accessToken in localStorage")
-        console.log("new Access Token: " + localStorage.getItem('accessToken'))
-        console.log("new/same Refresh Token: " + localStorage.getItem('refreshToken'))
+        console.log("New access token: " + localStorage.getItem('accessToken'))
     }
     else {
         console.log("Refresh request failed with status " + response.status)
@@ -110,7 +106,7 @@ async function getTopArtists() {
     })
   
     if (response.status == 200) {
-        console.log("Top artist request successful!")
+        console.log("Top artist request status 200!")
         let data = await response.json()
         let topArtists = []
         let topGenres = []
@@ -123,20 +119,19 @@ async function getTopArtists() {
         document.getElementById("a3").innerHTML = topArtists[2]
         document.getElementById("g1").innerHTML = topGenres[0]
         document.getElementById("g2").innerHTML = topGenres[1]
-        console.log('Successfully got top artists')
         console.log(topArtists, topGenres)
         return true;
     }
 
     else if (response.status == 401) {
-        console.log('Access Token expired :( respones status 401')
-        refreshAccessToken()
-        console.log('Successfully got new Access Token!')
+        console.log('Access Token is wrong - respones status 401')
+        await refreshAccessToken()
+        console.log('completed refreshAccessToken function')
         getTopArtists()
     }
 
     else {
-        console.log("Get recently played request failed with status " + response.status)
+        console.log("Get top artists request failed with status " + response.status)
         return false;
     }
 }
@@ -151,11 +146,10 @@ async function getCurrentlyPlaying() {
     })
   
     if (response.status == 200) {
-        console.log("Currently playing request successful!")
+        console.log("Currently playing status 200!")
         let data = await response.json()
         let currentSong = data['item']['name']
         let currentArtist = data['item']['artists'][0]['name']
-        console.log('Successfully got currently listening')
         console.log(currentSong, currentArtist)
         document.getElementById("currentSong").innerHTML = currentSong
         document.getElementById("currentArtist").innerHTML = currentArtist
@@ -164,9 +158,9 @@ async function getCurrentlyPlaying() {
     }
 
     else if (response.status == 401) {
-        console.log('Access Token expired :( response status 401')
-        refreshAccessToken()
-        console.log('Successfully got new Access Token!')
+        console.log('Access Token expired is wrong - response status 401')
+        await refreshAccessToken()
+        console.log('completed refreshAccessToken function')
         getCurrrentlyPlaying()
     }
 
@@ -177,10 +171,10 @@ async function getCurrentlyPlaying() {
     }
 }
 
-function doAll(){
-    //getCurrentlyPlaying()
-    getRecentlyPlayed()
-    //getTopArtists()
+async function doAll(){
+    await getCurrentlyPlaying()
+    await getRecentlyPlayed()
+    await getTopArtists()
     getDate()
 }
 
