@@ -116,3 +116,17 @@ a:hover{
 	overflow: hidden;
 	position: absolute;
 }
+
+#bottom{
+    color: #CAC0B3;
+    width: calc(100% - 200px);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    font-family: 'PT Sans Caption';
+    float: bottom;
+    margin-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}

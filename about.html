@@ -27,12 +27,49 @@
         <div id="header">
           <h1 id="hello">About <span style="color:#FF595A"> Me</span></h1>
         </div>
+        <h2 id="click">Click on a tile!</h2>
+        <div class="container" onclick="stagger.play()">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"><img class="pics" src="./assets/icecream.png"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"><img class="pics" src="./assets/tote.png"></div>
+          <div class="box"></div>
+          <div class="box"><img class="pics" src="./assets/boat.png"></div>
+          <div class="box"></div>
+
+          <div class="box"><img class="pics" src="./assets/museum.png"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"><img class="pics" src="./assets/crab.png"></div>
+          <div class="box"><img class="pics" src="./assets/tube.png"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+
+          <div class="box"></div>
+          <div class="box"><img class="pics" src="./assets/alaska.png"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"><img class="pics" src="./assets/hat.png"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"><img class="pics" src="./assets/selfie.png"></div>
+        </div>
+        <h2 class = "title"># Hobbies</h2>
+        <p class="musicBlurb">On my free time, you can usually find me reading, playing board games (Catan and Mahjong are my personal favorites!), dancing, hiking, or watching reality tv!</p>
+        <h2 class = "title"># Learning</h2>
+        <p class="musicBlurb">This semester (Spring 2023), I am studying data structures and algorithms, linear algebra and circuit design, and teaching myself web dev!</p>
+        <h2 class = "title"># Spotify Web API</h2>
         <p class="musicBlurb" id="curr">At this very moment, I am not listening to Spotify :( </p>
-        <p class="musicBlurb">The last song that I most recently listened to as of right now, <span class="date"></span>, is <span id="lastSong" style="color:#FF595A">warm glow</span> by <span id="lastArtist">Hippo Campus</span></p>
-        <p class="musicBlurb">My top artists as of right now, <span class="date"></span> are <span id="a1" style="color:#FF595A">Taylor Swift</span>, <span id="a2" style="color:#FF595A">Gracie Abrams</span>, and <span id="a3" style="color:#FF595A">Hozier</span>! Yes, I listen to a lot of <span id="g1">pop</span> and <span id="g2">indie pop</span>!</p>
-        <p class="musicBlurb"><em>(thank you to the Spotify Web API for all of this information 😉)</em></p>
-        
+        <p class="musicBlurb">The song that I listened to most recently is <span id="lastSong" style="color:#FF595A">warm glow</span> by <span id="lastArtist">Hippo Campus</span></p>
+        <p class="musicBlurb">My top artists as of today<span id="date"></span> are <span id="a1" style="color:#FF595A">Taylor Swift</span>, <span id="a2" style="color:#FF595A">Gracie Abrams</span>, and <span id="a3" style="color:#FF595A">Hozier</span>! Yes, I listen to a lot of <span id="g1">pop</span> and <span id="g2">indie pop</span>!</p>
+        <p class="musicBlurb"><em>(thank you to the Spotify Web API for this information 😉)</em></p>
     </div>
   </body>
+  <script src="song.js"></script>
   <script src="about.js"></script>
 </html>
