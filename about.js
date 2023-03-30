@@ -37,6 +37,7 @@ async function fetchTokens(){
 }
 
 async function getRecentlyPlayed() {
+    console.log("CUREENT ACCESS TOKEEEN" + localStorage.getItem('accessToken')) 
   
     const response = await fetch("https://api.spotify.com/v1/me/player/recently-played?limit=1", {
         method: 'GET',
@@ -60,7 +61,7 @@ async function getRecentlyPlayed() {
 
     else if (response.status == 401) {
         console.log('Access Token expired :( response status 401')
-        refreshAccessToken()
+        await refreshAccessToken()
         console.log('Successfully got new Access Token!')
         getRecentlyPlayed()
     }
@@ -71,7 +72,7 @@ async function getRecentlyPlayed() {
     }
 }
 
-async function refreshAccessToken(){
+async function refreshAccessToken() {
 
     const response = await fetch("https://accounts.spotify.com/api/token?grant_type=refresh_token&refresh_token=" + localStorage.getItem('refreshToken'), {
         method: 'POST',
@@ -146,6 +147,7 @@ async function getCurrentlyPlaying() {
     })
   
     if (response.status == 200) {
+        console.log("CURRENT ACCESS TOKEN" + localStorage.getItem('accessToken'))
         console.log("Currently playing request successful!")
         let data = await response.json()
         let currentSong = data['item']['name']
@@ -159,7 +161,7 @@ async function getCurrentlyPlaying() {
     }
 
     else if (response.status == 401) {
-        console.log('Access Token expired :( respones status 401')
+        console.log('Access Token expired :( response status 401')
         refreshAccessToken()
         console.log('Successfully got new Access Token!')
         getCurrrentlyPlaying()
@@ -173,9 +175,9 @@ async function getCurrentlyPlaying() {
 }
 
 function doAll(){
-    getCurrentlyPlaying()
+    //getCurrentlyPlaying()
     getRecentlyPlayed()
-    getTopArtists()
+    //getTopArtists()
     getDate()
 }
 
