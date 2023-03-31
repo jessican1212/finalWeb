@@ -130,3 +130,18 @@ a:hover{
     margin-top: 50px;
     margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 990px) {
+    #hello{
+        display: none;
+    }
+    #blurb{
+        padding-right: 10vw;
+    }
+    .sliding{
+        display: none;
+    }
+    #bottom{
+        opacity: 0;
+    }
+  }

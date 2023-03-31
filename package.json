@@ -1,13 +1,21 @@
 {
-  "name": "website-take-2",
+  "name": "finalweb",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to my personal website! Last updated: March 2023",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessican1212/finalWeb.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessican1212/finalWeb/issues"
+  },
+  "homepage": "https://github.com/jessican1212/finalWeb#readme",
   "dependencies": {
     "animejs": "^3.2.1"
   }

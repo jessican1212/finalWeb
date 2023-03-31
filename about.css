@@ -74,18 +74,18 @@ a:hover{
 
 .container{
     margin-top: 20px;
-    margin-right: 10vw;
+    margin-right: 3vw;
     display: grid;
-    max-width: 650px;
+    max-width: 660px;
     height: 230px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .box{
-    background: #001233;
-    border: 0.1px solid white;
-    margin: 1px;
+    background-color: 001233;
+    border: 0.1px solid rgb(255, 255, 255);
+    margin: 2px;
     overflow: hidden;
 }
 
@@ -106,4 +106,20 @@ a:hover{
     font-family: 'Bitter';
     font-size: 24px;
     font-weight: 800;
+}
+
+#last{
+    margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 890px) {
+    .container{
+        height: 180px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .container{
+        height: 130px;
+    }
 }

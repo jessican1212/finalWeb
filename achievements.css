@@ -37,7 +37,6 @@ body{
 #header{
     height: 100px;
     margin-top: 140px;
-    margin-left: 50px;
     font-size: 30px;
     display: flex;
 }
@@ -67,6 +66,10 @@ a:hover{
     max-width: 900px;
 }
 
+#grid-item3{
+    padding-left: 50px;
+}
+
 
 #achievements{
     color: #FF595A;
@@ -74,7 +77,6 @@ a:hover{
 }
 
 #blurb{
-    margin-left: 50px;
     font-size: 18px;
     font-family: 'PT Sans Caption';
     color: rgb(210, 210, 210);
@@ -83,12 +85,9 @@ a:hover{
 
 
 #projscontainer{
-    margin-left: 10vw;
-    width: 750px;
+    width: 600px;
     height: 575px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-left: 3vw;
 }
 
 .projswrapper{
@@ -100,7 +99,7 @@ a:hover{
 }
 
 .items{
-    margin: 0.75vw;
+    margin: 6px;
 }
 
 .card{
@@ -194,4 +193,20 @@ a:hover{
     margin-left: 10px;
     margin-right: 10px;
     font-size: 13px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .projswrapper{
+        width: 90%;
+        height: 90%;
+    }
+    #box4 .backtext{
+        font-size: 12px;
+    }
+    #box2 .backtext{
+        font-size: 12px;
+    }
+    #box3 .backtext{
+        font-size: 14px;
+    }
 }
