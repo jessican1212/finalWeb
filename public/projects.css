@@ -231,3 +231,9 @@ a:hover{
         display: block;
     }
   }
+
+  @media only screen and (max-width: 415px) {
+    #ski{
+        display: none;
+    }
+  }

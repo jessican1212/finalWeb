@@ -130,7 +130,7 @@ a:hover{
     font-size: 13px;
     font-family: 'PT Sans Caption';
     margin-top: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     max-width: 800px;
 }
 
@@ -229,5 +229,11 @@ a:hover{
     }
     .hamburger-menu{
         display: block;
+    }
+  }
+
+  @media only screen and (max-width: 415px) {
+    .sliding{
+        display: none;
     }
   }
