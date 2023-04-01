@@ -59,6 +59,7 @@
           <div class="box"></div>
           <div class="box"><img class="pics" src="./assets/selfie.png"></div>
         </div>
+        <div id="wrapper">
         <h2 class = "title"># Hobbies</h2>
         <p class="musicBlurb">On my free time, you can usually find me reading, playing board games (Catan and Mahjong are my personal favorites!), dancing, hiking, or watching reality tv!</p>
         <h2 class = "title"># Learning</h2>
@@ -68,6 +69,20 @@
         <p class="musicBlurb">The song that I listened to most recently is <span id="lastSong" style="color:#FF595A;">warm glow</span> by <span id="lastArtist">Hippo Campus</span></p>
         <p class="musicBlurb">My top artists as of today<span id="date"></span> are <span id="a1" style="color:#FF595A;">Taylor Swift</span>, <span id="a2" style="color:#FF595A">Gracie Abrams</span>, and <span id="a3" style="color:#FF595A">Hozier</span>! Yes, I listen to a lot of <span id="g1">pop</span> and <span id="g2">indie pop</span>!</p>
         <p class="musicBlurb" id="last"><em>(thank you to the Spotify Web API for this information 😉)</em></p>
+      </div>
+    </div>
+    <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+      <ul class="menu__box">
+        <li><a class="menu__item" href="index.html">home</a></li>
+        <li><a class="menu__item" href="">about</a></li>
+        <li><a class="menu__item" href="projects.html">projects</a></li>
+        <li><a class="menu__item" href="achievements.html">achievements</a></li>
+        <li><a class="menu__item" href="coursework.html">coursework</a></li>
+      </ul>
     </div>
   </body>
   <script src="song.js"></script>

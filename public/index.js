@@ -35,4 +35,10 @@ let textChanger = anime({
     easing: 'linear',
     delay: anime.stagger(1400, {start: 0}),
     loop: true
-  });
+});
+
+const element = document.getElementById("mail");
+
+element.addEventListener("click", function() {
+  alert("Please contact me at jessica_n@berkeley.edu!")
+});
